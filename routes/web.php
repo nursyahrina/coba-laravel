@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
-use PhpParser\Node\Stmt\Foreach_;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,54 +30,6 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/blog', function () {
+Route::get('/blog', [PostController::class, 'index']);
 
-    $blog_posts = [
-        [
-            "title" => "Judul Post Pertama",
-            "slug" => "judul-post-pertama",
-            "author" => "Rubie The Owner",
-            "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia facere nemo repellendus? Atque nam repudiandae eveniet reiciendis, quis rem vel architecto quae. Excepturi, qui vitae minus dignissimos non aspernatur, assumenda eligendi laborum accusantium earum at, maxime ipsa magni omnis modi culpa odit quis quo nesciunt ut nostrum provident. Vero obcaecati rerum necessitatibus dignissimos earum! Totam dolorum, corporis provident, quos porro, distinctio quis nihil qui debitis non dolores laboriosam omnis expedita facilis veniam doloremque sit enim officiis facere maiores delectus. Aut."
-        ],
-        [
-            "title" => "Judul Post Kedua",
-            "slug" => "judul-post-kedua",
-            "author" => "Hyoorin Lee",
-            "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia facere nemo repellendus? Atque nam repudiandae eveniet reiciendis, quis rem vel architecto quae. Excepturi, qui vitae minus dignissimos non aspernatur, assumenda eligendi laborum accusantium earum at, maxime ipsa magni omnis modi culpa odit quis quo nesciunt ut nostrum provident. Vero obcaecati rerum necessitatibus dignissimos earum! Totam dolorum, corporis provident, quos porro, distinctio quis nihil qui debitis non dolores laboriosam omnis expedita facilis veniam doloremque sit enim officiis facere maiores delectus. Aut."
-        ]
-    ];
-
-    return view('posts', [
-        "title" => "Blog",
-        "posts" => $blog_posts
-    ]);
-});
-
-Route::get('/blog/{slug}', function ($slug) {
-    $blog_posts = [
-        [
-            "title" => "Judul Post Pertama",
-            "slug" => "judul-post-pertama",
-            "author" => "Rubie The Owner",
-            "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia facere nemo repellendus? Atque nam repudiandae eveniet reiciendis, quis rem vel architecto quae. Excepturi, qui vitae minus dignissimos non aspernatur, assumenda eligendi laborum accusantium earum at, maxime ipsa magni omnis modi culpa odit quis quo nesciunt ut nostrum provident. Vero obcaecati rerum necessitatibus dignissimos earum! Totam dolorum, corporis provident, quos porro, distinctio quis nihil qui debitis non dolores laboriosam omnis expedita facilis veniam doloremque sit enim officiis facere maiores delectus. Aut."
-        ],
-        [
-            "title" => "Judul Post Kedua",
-            "slug" => "judul-post-kedua",
-            "author" => "Hyoorin Lee",
-            "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia facere nemo repellendus? Atque nam repudiandae eveniet reiciendis, quis rem vel architecto quae. Excepturi, qui vitae minus dignissimos non aspernatur, assumenda eligendi laborum accusantium earum at, maxime ipsa magni omnis modi culpa odit quis quo nesciunt ut nostrum provident. Vero obcaecati rerum necessitatibus dignissimos earum! Totam dolorum, corporis provident, quos porro, distinctio quis nihil qui debitis non dolores laboriosam omnis expedita facilis veniam doloremque sit enim officiis facere maiores delectus. Aut."
-        ]
-    ];
-
-    $selected_post = [];
-    foreach ($blog_posts as $post) {
-        if ($post["slug"] === $slug) {
-            $selected_post = $post;
-        }
-    }
-
-    return view('post', [
-        "title" => "Blog Post",
-        "post" => $selected_post
-    ]);
-});
+Route::get('/blog/{slug}', [PostController::class, 'show']);
