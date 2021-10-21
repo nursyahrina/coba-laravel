@@ -5,9 +5,10 @@
 
 <div class="d-flex flex-wrap-reverse justify-content-start">
     @foreach ($categories as $category)
-    <a href="categories/{{ $category->slug }}" class="card cat-card shadow-sm text-center rounded-pill m-3 p-4 <?= ($category->id % 2 == 0) ? 'bg-light' : 'bg-warning' ?>" style="min-width: 18rem;">
-        <div class="card-body">
-            <span class="h3 text-dark">{{ $category->name }}</span>
+    <a href="categories/{{ $category->slug }}" class="card m-3 text-white cat-card shadow">
+        <img src="https://source.unsplash.com/300x180?{{ $category->name }}" class="card-img" alt="{{ $category->name }}">
+        <div class="d-flex align-items-center card-img-overlay" style="background-color: <?= ($category->id % 2 == 0) ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 193, 7, 0.5)' ?>">
+            <p class="h2 fw-bold card-title">{{ $category->name }}</p>
         </div>
     </a>
 @endforeach
