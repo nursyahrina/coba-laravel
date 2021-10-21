@@ -16,9 +16,9 @@ class UserController extends Controller
 
     public function show(User $author)
     {
-        return view('author', [
+        return view('posts', [
             "title" => "Post by " . $author->name,
-            "author" => $author->name,
+            "head" => 'Post(s) by Author, <span class="text-warning">' . $author->name,
             "posts" => $author->posts,
         ]);
     }

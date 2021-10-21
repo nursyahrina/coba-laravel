@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<h1 class="my-4 py-4 text-end">__New(s) from Rubie'Studio!_ .</h1>
+<h1 class="my-4 py-4 text-end">__<?= $head ?>_ .</h1>
 
 @foreach ($posts as $post)
 <article class="mb-5 pb-4 border-bottom">
