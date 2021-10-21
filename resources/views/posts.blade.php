@@ -8,10 +8,10 @@
     <h2>
         <a href="posts/{{ $post->slug }}" class="text-warning">{{ $post->title }}</a>
     </h2>
-    <p>by <a class="fw-bold text-black" href="#">{{ $post->user->name }}</a> in <a class="fw-bold text-black" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
+    <p>by <a class="fw-bold text-black" href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a> in <a class="fw-bold text-black" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
     <p>{{ $post->excerpt }}</p>
 
-    <a href="posts/{{ $post->slug }}" class="fw-bold text-warning">___Read more_ .</a>
+    <a href="/posts/{{ $post->slug }}" class="fw-bold text-warning">___Read more_ .</a>
 </article>
 @endforeach
 @endsection

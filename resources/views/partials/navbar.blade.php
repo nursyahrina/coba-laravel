@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-warning">
+<nav class="navbar shadow-sm navbar-expand-lg fixed-top navbar-light bg-warning">
     <div class="container">
         <a class="navbar-brand" href="/">
             <img src="<?= env('APP_URL').'img/rubiestudio-nobg-black.png'; ?>" alt="Rubie'Studio" width="52" height="52" class="d-inline-block">

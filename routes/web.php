@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
@@ -35,17 +37,8 @@ Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
-Route::get('/categories', function () {
-    return view('categories', [
-        "title" => "Post Categories",
-        "categories" => Category::all()
-    ]);
-});
+Route::get('/categories', [CategoryController::class, 'index']);
 
-Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('category', [
-        "title" => $category->name,
-        "category" => $category->name,
-        "posts" => $category->posts,
-    ]);
-});
+Route::get('/categories/{category:slug}', [CategoryController::class, 'show']);
+
+Route::get('/authors/{author:username}', [UserController::class, 'show']);
