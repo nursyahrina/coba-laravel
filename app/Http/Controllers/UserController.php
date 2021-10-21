@@ -19,7 +19,7 @@ class UserController extends Controller
         return view('posts', [
             "title" => "Post by " . $author->name,
             "head" => 'Post(s) by Author, <span class="text-warning">' . $author->name,
-            "posts" => $author->posts,
+            "posts" => $author->posts->load('category', 'author'),
         ]);
     }
 }

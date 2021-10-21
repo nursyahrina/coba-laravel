@@ -21,7 +21,7 @@ class CategoryController extends Controller
             "title" => "Post in " . $category->name,
             "head" => 'Post(s) in Category, <span class="text-warning">' . $category->name,
             "category" => $category->name,
-            "posts" => $category->posts,
+            "posts" => $category->posts->load('category', 'author'),
         ]);
     }
 }
