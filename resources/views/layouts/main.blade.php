@@ -22,6 +22,10 @@
             text-decoration: none;
         }
 
+        li {
+            list-style-type: none;
+        }
+
         h1, h2, h3, .web-title {
             font-family: "Satisfy", cursive;
         }
