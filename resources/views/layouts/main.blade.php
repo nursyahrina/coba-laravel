@@ -22,7 +22,7 @@
             text-decoration: none;
         }
 
-        .card:hover {
+        .cat-card:hover {
             transform: scale(1.05);
         }
 

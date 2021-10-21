@@ -19,6 +19,8 @@ class Post extends Model
     ];
     // protected $guided = ['id'];
 
+    protected $with = ['category', 'author'];
+
     public function category()
     {
         return $this->belongsTo(Category::class);

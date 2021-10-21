@@ -13,7 +13,7 @@ class PostController extends Controller
             "title" => "Blog",
             "head" => "New(s) from Rubie'Studio!",
             // "posts" => Post::all()
-            "posts" => Post::with(['author', 'category'])->latest()->get()
+            "posts" => Post::latest()->get()
         ]);
     }
 
