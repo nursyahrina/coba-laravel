@@ -6,7 +6,7 @@
 @foreach ($posts as $post)
 <article>
     <h2>
-        <a href="../blog/{{ $post->slug }}" class="text-warning">{{ $post->title }}</a>
+        <a href="../posts/{{ $post->slug }}" class="text-warning">{{ $post->title }}</a>
     </h2>
     <h5>by {{ $post->author }}</h5>
     <p>{{ $post->excerpt }}</p>

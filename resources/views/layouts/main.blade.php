@@ -22,8 +22,8 @@
             text-decoration: none;
         }
 
-        li {
-            list-style-type: none;
+        .card:hover {
+            transform: scale(1.05);
         }
 
         h1, h2, h3, .web-title {

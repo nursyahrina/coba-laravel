@@ -16,7 +16,7 @@
                     <a class="nav-link {{ ($title) === "About" ? 'active fw-bold' : '' }}" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title) === "Blog" ? 'active fw-bold' : '' }}" href="/blog">Blog</a>
+                    <a class="nav-link {{ ($title) === "Blog" ? 'active fw-bold' : '' }}" href="/posts">Blog</a>
                 </li>
             </ul>
         </div>
