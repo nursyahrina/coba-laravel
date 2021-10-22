@@ -1,0 +1,89 @@
+body {
+    font-family: "Heebo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cat-card:hover {
+    transform: scale(1.05);
+}
+
+h1,
+h2,
+h3,
+.web-title {
+    font-family: "Satisfy", cursive;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.4em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+.web-title {
+    font-size: 1.5em;
+}
+
+.body-content {
+    margin-top: 6rem;
+}
+
+.register-sec,
+.login-sec {
+    margin-left: -10rem;
+}
+
+@media (max-width: 768px) {
+    .register-sec,
+    .login-sec {
+        margin-left: 0rem;
+    }
+}
+
+.register-img,
+.login-img {
+    margin-right: -8rem;
+    z-index: 2;
+}
+
+.form-signin {
+    z-index: 5;
+    width: 100%;
+    max-width: 360px;
+    background-color: rgba(255, 255, 224, 1);
+    border-radius: 25px;
+}
+
+.form-register {
+    z-index: 5;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 224, 1);
+    border-radius: 25px;
+}
+
+.form-register .form-floating:focus-within,
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-register input[type="text"],
+.form-register input[type="email"],
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-radius: 0;
+}

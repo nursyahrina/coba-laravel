@@ -16,45 +16,9 @@
     {{-- Bootstrap Icons --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
-    <style>
-        body {
-            font-family: "Heebo", sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .cat-card:hover {
-            transform: scale(1.05);
-        }
-
-        h1, h2, h3, .web-title {
-            font-family: "Satisfy", cursive;
-        }
-
-        h1 {
-            font-size: 3em;
-        }
-
-        h2 {
-            font-size: 2.4em;
-        }
-
-        h3 {
-            font-size: 1.8em;
-        }
-
-        .web-title {
-            font-size: 1.5em;
-        }
-
-        .body-content {
-            margin-top: 6rem;
-        }
-
-    </style>
-
+    {{-- Custom Style --}}
+    <link rel="stylesheet" href="/css/style.css">
+    
     <title>Rubie'Studio | {{ $title }}</title>
   </head>
   <body>
