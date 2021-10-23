@@ -1,6 +1,12 @@
 @extends('layouts.main')
 
 @section('container')
+@if (session()->has('success'))
+    <div class="alert-signin alert alert-success alert-dismissible fade show ms-auto m-auto" role="alert">
+      {{ session('success') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
 <div class="login-sec d-flex pt-4 justify-content-center align-items-center">
   <img class="d-none d-md-block mt-4 login-img" src="/img/{{ $image }}" alt="" width="400" height="400">
   <main class="form-signin card shadow-lg border-0 mt-4 p-4">

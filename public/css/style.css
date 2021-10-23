@@ -63,6 +63,11 @@ h3 {
     border-radius: 25px;
 }
 
+.alert-signin {
+    width: 100%;
+    max-width: 480px;
+}
+
 .form-register {
     z-index: 5;
     width: 100%;
