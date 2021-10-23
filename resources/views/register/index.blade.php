@@ -5,10 +5,10 @@
     <img class="d-none d-md-block mt-4 register-img" src="/img/{{ $image }}" alt="" width="400" height="400">
     <main class="form-register card shadow-lg border-0 mt-3 p-4">
         <h1 class="mb-3 mt-3 text-center">Registration Form</h1>
-        <form class="mt-2" method="POST">
+        <form action="/register" class="mt-2" method="POST">
             @csrf
             <div class="form-floating">
-                <input type="text" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" name="name" placeholder="name@example.com" value="{{ old('name') }}" required>
+                <input type="text" class="form-control rounded-top @error('name') is-invalid @enderror" id="name" name="name" placeholder="name@example.com" value="{{ old('name') }}" autofocus required>
                 <label for="name">Full Name</label>
                 @error('name')
                 <div class="invalid-feedback">
