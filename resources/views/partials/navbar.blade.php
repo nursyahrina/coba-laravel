@@ -3,7 +3,7 @@
         <a class="navbar-brand" href="/">
             <img src="<?= env('APP_URL').'img/rubiestudio-nobg-black.png'; ?>" alt="Rubie'Studio" width="52" height="52" class="d-inline-block">
             <span class="web-title">Rubie'Studio</span>
-          </a>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
