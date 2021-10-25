@@ -8,7 +8,7 @@
           <h5 class="mb-4 text-end"><small class="h6 align-baseline text-muted">({{ $post->created_at->diffForHumans() }})</small> in <span class="fw-bold text-dark" >{{ $post->category->name }}</span>_ .</h5>
 
           <a href="/dashboard/posts" class="btn btn-sm btn-success"><span data-feather="chevron-left"></span> Back to all my posts</a>
-          <a href="/dashboard/posts" class="btn btn-sm btn-warning"><span data-feather="edit-2"></span> Edit</a>
+          <a href="/dashboard/posts/{{ $post->slug }}/edit" class="btn btn-sm btn-warning"><span data-feather="edit-2"></span> Edit</a>
           
           <form action="/dashboard/posts/{{ $post->slug }}" method="POST" class="d-inline" onclick="return confirm('Are you sure to delete this post?')">
             @method('delete')
