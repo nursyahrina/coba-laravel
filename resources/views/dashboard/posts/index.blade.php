@@ -5,8 +5,15 @@
   <h1 class="h2">My Posts</h1>
 </div>
 
+@if (session()->has('success'))
+<div class="alert-signin alert alert-success alert-dismissible fade show ms-auto m-auto mb-3" role="alert">
+  {{ session('success') }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
 <div class="table-responsive">
-  <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create New Post</a>
+  <a href="/dashboard/posts/create" class="btn btn-dark mb-3 text-warning">Create New Post</a>
   <table class="table table-striped">
     <thead>
       <tr>
