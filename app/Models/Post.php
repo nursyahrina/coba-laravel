@@ -16,6 +16,7 @@ class Post extends Model
         'user_id',
         'slug',
         'excerpt',
+        'image',
         'body',
     ];
     // protected $guided = ['id'];
