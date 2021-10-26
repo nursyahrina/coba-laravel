@@ -28,7 +28,6 @@
         <td>{{ $loop->iteration }}</td>
         <td>{{ $category->name }}</td>
         <td>
-          <a href="/dashboard/categories/{{ $category->slug }}" class="btn border-0 btn-sm btn-info px-1 pt-0 me-1 mb-1 mb-lg-0"><span data-feather="eye"></span></a>
           <a href="/dashboard/categories/{{ $category->slug }}/edit" class="btn btn-sm btn-warning border-0 px-1 pt-0 me-1 mb-1 mb-lg-0"><span data-feather="edit-2"></span></a>
           <form action="/dashboard/categories/{{ $category->slug }}" method="POST" class="d-inline" onclick="return confirm('Are you sure to delete this category?')">
             @method('delete')
